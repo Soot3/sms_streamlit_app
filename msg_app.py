@@ -35,11 +35,11 @@ if submit_button:
     send_date = datetime.strptime(dateandtime, '%Y-%m-%d %H:%M:%S')
     send_date = str(send_date.isoformat())
     recipients_val_split = [{"phone_number": recipent_val,"first_name":recipent_val1, "last_name":recipent_val2}]
-    credit_result = requests.get("https://api.octopush.com/v1/public/wallet/check-balance", headers={"api-login":api_login,"api-key":api_key}, params={"with_details":True})
+    credit_result = requests.get("https://api.octopush.com/v1/public/wallet/check-balance", headers={"api-login":login,"api-key":auth_key}, params={"with_details":True})
     
     parameters = {"text":msg_val, "recipients":recipients_val_split, "type":type_val,"sender":sender_val, "send_at":send_date,"purpose":purpose_val,"with_replies":replies_val}
 
-    result = requests.post("https://api.octopush.com/v1/public/sms-campaign/send", headers={"api-login":api_login,"api-key":api_key}, data=json.dumps(parameters))
+    result = requests.post("https://api.octopush.com/v1/public/sms-campaign/send", headers={"api-login":login,"api-key":auth_key}, data=json.dumps(parameters))
 
 st.write("Credit Check")
 st.write(credit_result.text)
