@@ -5,8 +5,8 @@ import requests
 import json
 
 # Authentication from environment variables
-login = api_login
-auth_key = api_key
+login = st.secrets["api_login"]
+auth_key = st.secrets["api_key"]
 
 
 st.title("SMS Scheduler (Octopush Web App)")
