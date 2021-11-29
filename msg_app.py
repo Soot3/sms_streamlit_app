@@ -14,6 +14,7 @@ st.header("This app uses the Octopush API to schedule messages to mobile phones"
 
 st.write("Octopush allows you to automate sending SMS with your applications, software and information systems.")
 st.write ("With Octopush you can send SMS messages to more than 196 countries using their SMS API")
+st.markdown("Code for this app can be found [here](https://github.com/Soot3/sms_streamlit_app)")
 
 info_form = st.form(key = "info",clear_on_submit=True)
 
