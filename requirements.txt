@@ -1,0 +1,3 @@
+streamlit==1.2.0
+octopush==1.0.0
+datetime==4.3

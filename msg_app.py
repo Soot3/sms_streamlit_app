@@ -4,7 +4,7 @@ from octopush import SMS
 import requests
 import json
 
-# Authentication 
+# Authentication from environment variables
 login = api_login
 auth_key = api_key
 
@@ -15,7 +15,7 @@ st.header("This app uses the Octopush API to schedule messages to mobile phones"
 st.write("Octopush allows you to automate sending SMS with your applications, software and information systems.")
 st.write ("With Octopush you can send SMS messages to more than 196 countries using their SMS API")
 
-info_form = st.form(key = "info")
+info_form = st.form(key = "info",clear_on_submit=True)
 
 msg_val = info_form.text_input(label='What message do you want to send')
 recipent_val = info_form.text_input(label="Input recipent")
