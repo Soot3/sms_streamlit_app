@@ -41,9 +41,9 @@ if submit_button:
 
     result = requests.post("https://api.octopush.com/v1/public/sms-campaign/send", headers={"api-login":login,"api-key":auth_key}, data=json.dumps(parameters))
 
-st.write("Credit Check")
-st.write(credit_result.text)
+    st.write("Credit Check")
+    st.write(credit_result.text)
 
-st.write("Message result")
-st.write(result)
-st.write(result.text)
+    st.write("Message result")
+    st.write(result)
+    st.write(result.text)
